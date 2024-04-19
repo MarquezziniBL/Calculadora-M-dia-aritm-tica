@@ -1,0 +1,16 @@
+print(" Bem vindo a Calculadora de médias aritméticas\n",
+      "Troque o ponto por uma virgula.\n",
+      "Errado: 5,8\n",
+      "Correto: 5.8\n")
+L = []
+soma = 0
+while True:
+    nota = float(input("Nota: "))
+    L.append(nota)
+    soma += nota
+    continuar = input("Continuar? [S/N]: ")
+    if continuar.upper() == "N":
+        res = soma / len(L)
+        print("\nA notas digitadas foram:", L)
+        print(f"\nSua média é:{res:.2f}")
+        break
